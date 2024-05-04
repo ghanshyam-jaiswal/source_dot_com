@@ -11,10 +11,8 @@ const App = () => {
           </Routes>
         </Router> */}
 
-          {/* It is changed ok no problem it is done */}
 
         <Login/>
-        {/* it is changed ............... */}
     </div>
   )
 }
