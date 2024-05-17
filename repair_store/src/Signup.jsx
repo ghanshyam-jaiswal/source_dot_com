@@ -1,9 +1,16 @@
 import React from 'react'
 import '../css/signup.css'
 const Signup = () => {
+
+
+  let submitHandle=(e)=>{
+    // e.preventDefault()
+  }
+
+
   return (
     <div className='signup'>
-      <form>
+      <form onSubmit={submitHandle}>
         <h1>Sign Up</h1>
         <div className='signup-div'>
           <div className="signup-fullname">
