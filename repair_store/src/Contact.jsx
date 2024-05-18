@@ -1,11 +1,23 @@
 import React from "react";
 import "../css/contact.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineMessage } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { FaMailBulk } from "react-icons/fa";
+// import Landing from "./Landing";
+import { toast,ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// toast.configure();
 
 const Contact = () => {
+  let nevigate=useNavigate()
+  let handleIt=()=>{
+    toast("Hello Geeks");
+    // nevigate("/home")
+    // <Landing/>
+    // useNavigate("/home")
+  }
+
   return (
     <>
       <div className="contact">
@@ -16,9 +28,11 @@ const Contact = () => {
           <div className="contact-type-box1">
             <h3><MdOutlineMessage style={{marginRight:'2%',fontSize:'200%'}}/> Send Your Queries or Questions Here</h3>
             <form>
-              <textarea name="" id="" style={{maxHeight:'50%',minHeight:'50%',maxWidth:'60%',minWidth:'60%',border:'none',padding:'2%'}}>Write Here.........</textarea>
+              {/* <textarea name="" id="" style={{maxHeight:'50%',minHeight:'50%',maxWidth:'60%',minWidth:'60%',border:'none',padding:'2%'}}>Write Here.........</textarea> */}
+              <textarea name="" id="" style={{maxHeight:'50%',minHeight:'50%',maxWidth:'60%',minWidth:'60%',border:'none',padding:'2%'}} defaultValue="Write Here......"></textarea>
               {/* <input type="text" placeholder="Hello........" className="contact-type-box1-msg"/> */}
-              <div className="contact-type-box1-submit"><input type="submit" value={'Send'} /></div>
+              <div className="contact-type-box1-submit"><input type="submit" value={'Send'}/> </div>
+              {/* <div className="contact-type-box1-submit"><button onClick={handleIt}>click</button><ToastContainer /></div> */}
             </form>
           </div>
 

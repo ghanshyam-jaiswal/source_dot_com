@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/about.css'
 const About = () => {
+
+//   let [use,setUse]=useState([
+//     {
+//       name:'gk',
+//       profession:'engineer'
+//     },
+//     {
+//       name:'shyam',
+//       profession:'brand'
+//     },
+//     {
+//       name:'ghanshyam',
+//       profession:'engineer'
+//     },
+
+// ])
+//   console.log(use[1].profession)
+
   return (
     <div className='about'>
       <h1>About Us</h1>

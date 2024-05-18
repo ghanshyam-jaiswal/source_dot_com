@@ -10,11 +10,14 @@ const Landing = () => {
 
       <div className="landing-item">
 
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/alarm\ watch.jpg")'}}></div>
-          <div className="landing-item-text">Alarm</div>
-        </div>
-
+        
+          <div className="landing-item-items">
+            <Link to={"/alarm"} style={{textDecoration:"none"}}>
+              <div className="landing-item-img" style={{backgroundImage:'url("../Assests/alarm\ watch.jpg")'}}></div>
+              <div className="landing-item-text">Alarm</div>
+            </Link>
+          </div>
+     
         <div className="landing-item-items">
           <div className="landing-item-img" style={{backgroundImage:'url("../Assests/charger or battery.jpg")'}}></div>
           <div className="landing-item-text">Charger or Battery</div>
