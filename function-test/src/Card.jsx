@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {useParams } from 'react-router-dom';
+import list from '../Data/product';
 
-const Card = (props) => {
+const Card = ({addToCart}) => {
+ 
+  const {name} = useParams();  
+  // const selectedCard = list[index];
+  const selectedCard = list.find(card => card.name === name); // it is arrow function --> list.find((card) => { return card.name === name}); 
+  // console.log(selectedCard)
+  
 
-    const { state } = props.location;
-    const { img, name } = state;
-    console.log(state)
-    console.log(name)
+
+
+  // let timePss=()=>{
+  //   console.log('timepass')
+  // }
 
   return (
     <div>
       <h2>Details</h2>
-      <img src={img} />
-      <p>{name}</p>
+      <img src={selectedCard.img} style={{width:"20%",height:"20%"}}></img>
+      <h1>{selectedCard.name}</h1>
+     
+      <br/>
+      <button onClick={() => addToCart(selectedCard)}>Request</button>
+      <button>Cancel</button>
     </div>
   )
 }

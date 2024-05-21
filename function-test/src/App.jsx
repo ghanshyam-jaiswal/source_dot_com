@@ -1,21 +1,31 @@
-import React, { useState } from 'react'
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import Nav from './Nav';
-import Body from './Body';
+import React, { useEffect, useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './Login';
 import Card from './Card';
 import Profile from './Profile';
 import Home from './Home';
 import Cards from './Cards';
+import Cart from './Cart';
 
 const App = () => {
 
-    let [product,setProduct]=useState([
-        {
-            name:"gk",
-            email:"gk@gmail.com"
-        }
-    ])
+    let [cart,setCart]=useState([])
+
+    let addToCart=(data)=>{
+      
+       setCart([...cart,data])
+ 
+    //    console.log(data)
+       console.log(cart)
+    //    console.log(setCart)
+ 
+   }
+
+    useEffect(() => {
+      console.log(cart.length);
+    }, [cart]);
+
+
     let router= createBrowserRouter([
         {
            path:'/',
@@ -23,11 +33,11 @@ const App = () => {
            children:[
             {
                 path:'/cards',
-                element:<Cards check={product}/>
+                element:<Cards/>
             },
             {
-                path:'/card',
-                element:<Card/>
+                path:'/card/:name',
+                element:<Card addToCart={addToCart}/>
             },
             {
                 path:'/login',
@@ -36,6 +46,10 @@ const App = () => {
             {
                 path:'/profile',
                 element:<Profile/>
+            },
+            {
+                path:'/cart',
+                element:<Cart/>
             },
            ]
         }

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import list from '../Data/product'
 import { Link } from 'react-router-dom'
 
 
 const Cards = () => {
+
+  
+
   return (
     
     
@@ -12,7 +15,7 @@ const Cards = () => {
       {
            list.map((item,index)=>(
             
-                   <Link key={index} to={{pathname:'/card',state:item}}>
+                   <Link key={item.id} to={`/card/${item.name}`}>
                         <div  className='cards' >
                                     <img src={item.img} alt="" style={{width:"100%",height:"5%"}}/>
                                     <p>{item.name}</p>
@@ -25,8 +28,6 @@ const Cards = () => {
       }
       
       
-      {/* style={{width:"100%",height:'70%'}} */}
-
     </div>
   )
 }
