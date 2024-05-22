@@ -12,11 +12,11 @@ const App = () => {
     let [cart,setCart]=useState([])
 
     let addToCart=(data)=>{
-      
-       setCart([...cart,data])
+
+      cart.find(card => card.name === data.name) ? alert('already exists') : setCart([...cart,data])
  
-    //    console.log(data)
        console.log(cart)
+    //    console.log(data)
     //    console.log(setCart)
  
    }
@@ -29,7 +29,7 @@ const App = () => {
     let router= createBrowserRouter([
         {
            path:'/',
-           element:<Home/>,
+           element:<Home count={cart.length}/>,
            children:[
             {
                 path:'/cards',
@@ -49,7 +49,7 @@ const App = () => {
             },
             {
                 path:'/cart',
-                element:<Cart/>
+                element:<Cart cart={cart} setCart={setCart}/>
             },
            ]
         }

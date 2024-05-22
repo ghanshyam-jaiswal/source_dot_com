@@ -3,10 +3,10 @@ import Nav from './Nav'
 import { Outlet } from 'react-router-dom'
 import Body from './Body'
 
-const Home = () => {
+const Home = ({count}) => {
   return (
     <div className='home'>
-      <Nav/>
+      <Nav count={count}/>
       {/* <Body/> */}
       {/* <h1>Home</h1> */}
       <Outlet/>

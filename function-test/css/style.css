@@ -7,6 +7,7 @@
     width: 100vw;
     height: 100vh;
     border: 2px solid red;
+    /* display: flex; */
 }
 .nav{
     width: auto;
@@ -24,3 +25,6 @@
     margin: 2%;
 
 }
+/* .cards-parent{
+    display: flex;
+} */
