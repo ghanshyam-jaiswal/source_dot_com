@@ -9,7 +9,7 @@ import Login from "./Login";
 import Cart from "./Cart";
 import UserProfile from "./UserProfile";
 import Landing from "./Landing";
-import Alarm from "./Card_Description/Alarm";
+import Card from "./Card";
 
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/profile" element={<UserProfile />}></Route>
-          <Route path="/alarm" element={<Alarm/>}></Route>
+          <Route path="/card/:name" element={<Card/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

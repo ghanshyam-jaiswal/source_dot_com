@@ -1,7 +1,8 @@
 import React from 'react'
 import '../css/landing.css'
 import { Link } from 'react-router-dom'
-// import alarm\ watch from '../Assests/alarm watch.jpg'
+import list from '../Data/product'
+
 const Landing = () => {
   return (
     <div className='landing'>
@@ -10,84 +11,20 @@ const Landing = () => {
 
       <div className="landing-item">
 
-        
-          <div className="landing-item-items">
-            <Link to={"/alarm"} style={{textDecoration:"none"}}>
-              <div className="landing-item-img" style={{backgroundImage:'url("../Assests/alarm\ watch.jpg")'}}></div>
-              <div className="landing-item-text">Alarm</div>
-            </Link>
-          </div>
-     
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/charger or battery.jpg")'}}></div>
-          <div className="landing-item-text">Charger or Battery</div>
-        </div>
+        {
+          list.map((item,index)=>(
 
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/headphones.jpg")'}}></div>
-          <div className="landing-item-text">Headphones</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/speaker.jpg")'}}></div>
-          <div className="landing-item-text">Speaker</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/tv.jpg")'}}></div>
-          <div className="landing-item-text">TV</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/mobile.jpg")'}}></div>
-          <div className="landing-item-text">Mobile</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/laptop.jpg")'}}></div>
-          <div className="landing-item-text">Laptop</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/tablet.jpg")'}}></div>
-          <div className="landing-item-text">Tablet</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/smart-watch.jpg")'}}></div>
-          <div className="landing-item-text">Smart Watch</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/computer.jpg")'}}></div>
-          <div className="landing-item-text">Computer</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/cpu.jpg")'}}></div>
-          <div className="landing-item-text">CPU</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/mouse.jpg")'}}></div>
-          <div className="landing-item-text">Mouse</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/keyboard.jpg")'}}></div>
-          <div className="landing-item-text">Keyboard</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/remote.jpg")'}}></div>
-          <div className="landing-item-text">Remote</div>
-        </div>
-
-        <div className="landing-item-items">
-          <div className="landing-item-img" style={{backgroundImage:'url("../Assests/iron-img.jpg")'}}></div>
-          <div className="landing-item-text">Iron</div>
-        </div>
-
+                <div className="landing-item-items">
+                  <Link key={item.id} to={`/card/${item.name}`} style={{textDecoration:"none"}}>
+                    {/* <div className="landing-item-img" style={{backgroundImage:'url("../Assests/alarm\ watch.jpg")'}}></div> */}
+                    <img src={item.img} alt="" className="landing-item-img" />
+                    {/* <div className="landing-item-text">Alarm</div> */}
+                    <div className="landing-item-text">{item.name}</div>
+                  </Link>
+                </div>
+          ))
+        }
+       
       </div>
 
       <div className="landing-back-to-top">Back-to-top</div>
