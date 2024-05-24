@@ -1,10 +1,14 @@
 import React from 'react'
 import '../css/signup.css'
+import { useNavigate } from 'react-router-dom'
 const Signup = () => {
 
+  let navigate=useNavigate()
+  
 
   let submitHandle=(e)=>{
     // e.preventDefault()
+    navigate('/login')
   }
 
 
@@ -36,7 +40,7 @@ const Signup = () => {
             <input type="text" placeholder='Country'/>
           </div>
           <div className="signup-submit">
-            <input type="submit" value={'Sign up'} style={{backgroundColor:'rgb(81, 81, 222)',color:'white'}}/>
+            <input type="submit" value={'Sign up'} style={{backgroundColor:'rgb(81, 81, 222)',color:'white'}} onClick={()=>submitHandle()}/>
           </div>
           
         </div>

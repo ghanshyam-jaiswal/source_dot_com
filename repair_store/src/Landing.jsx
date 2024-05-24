@@ -1,13 +1,56 @@
 import React from 'react'
 import '../css/landing.css'
 import { Link } from 'react-router-dom'
+import Slider from 'react-slick'; 
 import list from '../Data/product'
 
+
 const Landing = () => {
+
+  let imageSlide=[
+    {
+      img:'../Assests/tablet.png'
+    },
+    {
+      img:'../Assests/tv.png'
+    },
+    {
+      img:'../Assests/thankyou.png'
+    },
+  ]
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
     <div className='landing'>
 
-      <div className="landing-hero"></div>
+      <div className="lyanding-hero"></div>
+     
+        {/* <Slider {...settings} >
+          
+          {
+            imageSlide.map((item,index)=>(
+
+              // <div className="landing-hero" key={index} style={{backgroundImage:`url(${item.img})`}}> </div>
+              <div key={index} style={{backgroundImage:`url(${item.img})`}} className="landing-hero"> </div>
+
+            ))
+          }
+
+        </Slider>
+         */}
+    
+     
+      
+      
 
       <div className="landing-item">
 

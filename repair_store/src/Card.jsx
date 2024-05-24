@@ -1,13 +1,23 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import list from '../Data/product'
 import '../css/card.css'
+import Payment from './Payment'
 
 const Card = () => {
 
     let {name}=useParams()
     let selectedCard=list.find((card)=>{return card.name===name})
     console.log(selectedCard)
+
+    let navigate = useNavigate()
+    
+    let requestHandle=()=>{
+      navigate('/payment', { state: { selectedCard } });
+    }
+    let handleCancel=()=>{
+      navigate('/home')
+    }
 
   return (
     <div className='card'>
@@ -36,8 +46,8 @@ const Card = () => {
         
       </div>
       <div className="card-button">
-        <button className='card-button-request'>Request</button>
-        <button className='card-button-cancel'>Cancel</button>
+        <button className='card-button-request' onClick={()=> requestHandle()}>Request</button>
+        <button className='card-button-cancel'onClick={()=> handleCancel()}>Cancel</button>
       </div>
       
     </div>

@@ -6,7 +6,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(../Assests/pexels-rostislav-5011647.jpg);
+        /* background-image: url(../Assests/pexels-rostislav-5011647.jpg); */
+        background-image: url(../Assests/signup-img.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         /* background-attachment: fixed; */
@@ -33,9 +34,9 @@
         
     }
     .login h1{
-        text-shadow: 1px 1px 5px black;
+        /* text-shadow: 1px 1px 5px black; */
         /* font-size: x-large; */
-        color: white;
+        color: rgb(0, 0, 0);
     }
     .login form{
         display: flex;
@@ -58,8 +59,8 @@
         /* background: transparent; */
         background-color: rgb(171, 171, 214);
         color: black;
-        font-weight: bold;
-        font-size:medium ;
+        /* font-weight: bold; */
+        /* font-size:medium ; */
         
         
     }
@@ -71,10 +72,14 @@
     }
     .login form .submit-btn{
         width: 30%;
+        height: 20%;
         padding: 0%;
-        color: white;
+        color: rgb(235, 222, 222);
         background-color: rgb(80, 80, 202);
         border: none;
+        border-radius: 5px;
+        margin-right: 6%;
+        margin-left: 6%;
     }
     .login form .submit-btn:hover{
         background-color: rgb(55, 55, 221);
