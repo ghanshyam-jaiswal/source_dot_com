@@ -8,6 +8,7 @@ const Nav = ({count}) => {
     <div className='nav'>
       <Link to={'/'}>Home</Link>
       <Link to={'/cards'}>Cards</Link>
+      <Link to={'/signup'}>Signup</Link>
       <Link to={'/login'}>Login</Link>
       <Link to={'/profile'}>Profile</Link>
       <Link to={'/cart'}><PiShoppingCartDuotone style={{fontSize:'30'}}/> <sup>{count}</sup></Link>

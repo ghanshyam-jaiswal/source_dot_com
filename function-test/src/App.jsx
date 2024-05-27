@@ -6,6 +6,7 @@ import Profile from './Profile';
 import Home from './Home';
 import Cards from './Cards';
 import Cart from './Cart';
+import Signup from './Signup';
 
 const App = () => {
 
@@ -42,6 +43,10 @@ const App = () => {
             {
                 path:'/login',
                 element:<Login/>
+            },
+            {
+                path:'/signup',
+                element:<Signup/>
             },
             {
                 path:'/profile',

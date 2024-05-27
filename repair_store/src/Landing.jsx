@@ -32,7 +32,7 @@ const Landing = () => {
   return (
     <div className='landing'>
 
-      <div className="lyanding-hero"></div>
+      <div className="landing-hero"></div>
      
         {/* <Slider {...settings} >
           
