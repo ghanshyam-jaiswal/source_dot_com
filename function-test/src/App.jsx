@@ -7,6 +7,7 @@ import Home from './Home';
 import Cards from './Cards';
 import Cart from './Cart';
 import Signup from './Signup';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
 
@@ -25,6 +26,9 @@ const App = () => {
     useEffect(() => {
       console.log(cart.length);
     }, [cart]);
+
+
+    
 
 
     let router= createBrowserRouter([
@@ -65,6 +69,7 @@ const App = () => {
   return (
     <div>
       <RouterProvider router={router}/>
+      <Toaster />
     </div>
   )
 }
