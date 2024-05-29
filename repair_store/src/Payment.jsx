@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Payment = ({addToCart}) => {
 
@@ -14,6 +15,7 @@ const Payment = ({addToCart}) => {
 
     let thankYou=()=>{
         navigate('/thankyou')
+        // toast.success('Successful')
     }
 
   return (

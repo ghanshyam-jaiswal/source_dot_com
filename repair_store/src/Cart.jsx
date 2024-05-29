@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../css/cart.css'
 const Cart = ({cart,setCart}) => {
 
   let cartDelete=(dataToDelete)=>{
@@ -9,7 +9,7 @@ const Cart = ({cart,setCart}) => {
     setCart(newData)
   }
   return (
-    <div>
+    <div className='cart'>
       {/* <h1>Cart</h1> */}
 
       {

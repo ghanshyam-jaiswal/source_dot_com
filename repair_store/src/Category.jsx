@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '../css/category.css'
 const Category = () => {
   return (
-    <div>
+    <div className='category'>
       <h1>category</h1>
     </div>
   )

@@ -14,6 +14,7 @@ const Contact = () => {
   let navigate=useNavigate()
 
   let handleSend=()=>{
+    toast.success('Successful')
     navigate('/thankyou')
   }
 

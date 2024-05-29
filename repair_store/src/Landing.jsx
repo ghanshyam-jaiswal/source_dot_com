@@ -1,7 +1,6 @@
 import React from 'react'
 import '../css/landing.css'
 import { Link } from 'react-router-dom'
-import Slider from 'react-slick'; 
 import list from '../Data/product'
 
 

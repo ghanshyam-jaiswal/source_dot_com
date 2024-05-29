@@ -9,7 +9,7 @@ const Nav = ({count}) => {
       <div className="nav">
         <div className="nav-logo"></div>
         <div className="nav-links">
-          <NavLink to={"/home"} className={(e)=>{return e.isActive?"red":" "}} >Home</NavLink>
+          <NavLink to={"/"} className={(e)=>{return e.isActive?"red":" "}} >Home</NavLink>
           <NavLink to={"/category"} className={(e)=>{return e.isActive?"red":" "}} >Category</NavLink>
           {/* <NavLink to={"/signup"} className={(e)=>{return e.isActive?"red":" "}}>Sign Up</NavLink> */}
           <NavLink to={"/login"} className={(e)=>{return e.isActive?"red":" "}} >Login</NavLink>

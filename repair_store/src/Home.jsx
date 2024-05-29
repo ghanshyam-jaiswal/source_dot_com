@@ -7,7 +7,6 @@ const Home = ({count}) => {
     <div className='home'>
       <Nav count={count}/>
       <Outlet/>
-
     </div>
   )
 }

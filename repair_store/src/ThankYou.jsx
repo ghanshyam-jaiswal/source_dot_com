@@ -5,7 +5,7 @@ const ThankYou = () => {
 
     let navigate=useNavigate()
     let handleOk=()=>{
-        navigate('/home')
+        navigate('/')
     }
   return (
     <div className='thankyou'>

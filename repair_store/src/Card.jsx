@@ -16,7 +16,7 @@ const Card = () => {
       navigate('/payment', { state: { selectedCard } });
     }
     let handleCancel=()=>{
-      navigate('/home')
+      navigate('/')
     }
 
   return (
