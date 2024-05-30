@@ -6,6 +6,10 @@
     align-items: center;
     flex-wrap: wrap; */
     /* border: 2px solid red; */
+    background-image: url('../Assests/signup-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 .contact .contact-text{
@@ -15,16 +19,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: transparent */
 }
 .contact-type{
     width: 100%;
     height: 56.90%;
     /* border: 2px solid ; */
     /* background-color: rgb(240, 233, 226); */
-    background-image: url('../Assests/signup-img.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  
 
     display: flex;
 

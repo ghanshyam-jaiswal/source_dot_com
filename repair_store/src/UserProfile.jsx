@@ -31,7 +31,7 @@ const UserProfile = () => {
     <div className="profile">
       <div className="profile-body">
 
-        <div className="profile-body-img" style={{ backgroundImage: `url(${userImg})`,backgroundSize:'cover',backgroundPosition:'centre' }} onClick={handleDivClick}>
+        <div className="profile-body-img" style={{ backgroundImage: `url(${userImg})` }} onClick={handleDivClick}>
           {/* {<img src={userImg} alt="" />} */}
           {/* <input type="file" id="" value={userImg.img} onChange={handleImage} /> */}
           <input type="file"  ref={fileInputRef}  style={{ display: 'none' }} onChange={handleImage} />

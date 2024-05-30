@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/cart.css'
+import { Link } from 'react-router-dom'
 const Cart = ({cart,setCart}) => {
 
   let cartDelete=(dataToDelete)=>{
@@ -17,9 +18,11 @@ const Cart = ({cart,setCart}) => {
             
                    
                         <div key={item.id} className='cards' >
-                                    <img src={item.img} alt="" />
-                                    <p>{item.name}</p>
-                                    <button onClick={()=>cartDelete(index)}>Delete</button>
+                                  <Link to={`/card/${item.name}`}><img src={item.img} alt="" /></Link> 
+                                   <div className="cards-info">
+                                      <p>{item.name}</p>
+                                      <button onClick={()=>cartDelete(index)}>Delete</button>
+                                   </div> 
                         </div>
                 
                         

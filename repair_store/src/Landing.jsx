@@ -28,6 +28,15 @@ const Landing = () => {
     autoplaySpeed: 2000,
   };
 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling behavior
+    });
+  };
+
+
   return (
     <div className='landing'>
 
@@ -69,7 +78,7 @@ const Landing = () => {
        
       </div>
 
-      <div className="landing-back-to-top">Back-to-top</div>
+      <div className="landing-back-to-top" onClick={scrollToTop}>Back-to-top</div>
       <div className="landing-footer">
         <div className="landing-footer-logo1" style={{backgroundImage: 'url("../Assests/8303673-removebg-preview.png")'}}></div>
         <div className="landing-footer-info" style={{color: 'rgb(224, 209, 209)'}}>
@@ -89,7 +98,7 @@ const Landing = () => {
           <div>Youtube</div>
         </div>
         <div className="landing-footer-info landing-footer-info-link">
-         <div><Link to={'/home'}>Home</Link></div>
+         <div><Link onClick={scrollToTop}>Home</Link></div>
          <div><Link to={'/category'}>Category</Link></div>
          <div><Link to={'/signup'}>Sign up</Link></div>
          <div><Link to={'/contact'}>Contact</Link></div>
